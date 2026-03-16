@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Customer Sentiment Analyzer</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<h1 class="header-title">AI Customer Sentiment Analyzer</h1>
+
+<p class="subtitle">
+Nhập phản hồi của khách hàng để AI phân tích cảm xúc
+</p>
+
+</header>
+
+<main>
+
+<section class="container">
+
+<form id="sentimentForm" class="sentiment-form">
+
+<label for="feedback" class="input-label">
+Customer Feedback
+</label>
+
+<textarea
+id="feedback"
+name="feedback"
+class="input-area"
+placeholder="Ví dụ: Sản phẩm rất tốt, giao hàng nhanh"
+aria-label="Customer feedback input"
+required>
+</textarea>
+
+<button
+id="analyzeBtn"
+class="btn-primary"
+type="button">
+<i class="fas fa-brain"></i>
+<span class="btn-text">Analyze Sentiment</span>
+</button>
+
+</form>
+
+<div
+id="resultBox"
+class="result-box hidden"
+aria-live="polite">
+
+<h3 class="result-title">Kết quả phân tích</h3>
+
+<div class="result-row">
+
+<span class="result-label">
+Sentiment:
+</span>
+
+<span id="sentiment" class="result-value"></span>
+
+</div>
+
+<div class="result-row">
+
+<span class="result-label">
+Explanation:
+</span>
+
+<span id="explanation" class="result-value"></span>
+
+</div>
+
+</div>
+
+<p
+id="error"
+class="error-message"
+aria-live="assertive">
+</p>
+
+</section>
+
+</main>
+
+<footer class="footer">
+
+<p>AI Sentiment Analyzer Project</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
